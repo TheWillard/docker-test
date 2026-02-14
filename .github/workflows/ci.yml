@@ -39,6 +39,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: thewillard/arsa-test:$BRANCH_NAME, thewillard/arsa-test:$VERSION
+          tags: thewillard/arsa-test:${{ env.BRANCH_NAME }}, thewillard/arsa-test:${{ env.VERSION }}
           build-args: |
-            STEAM_APP_ID=$APP_ID
+            STEAM_APP_ID=${{ env.APP_ID }}
