@@ -20,6 +20,7 @@ jobs:
           echo "Branch: $BRANCH_NAME"
           VERSION="${REPO_TAG%.*}"
           echo "Version: $VERSION"
+          echo "${{ secrets.DOCKERHUB_TOKEN }}"
 
       - name: Determine app id
         run: |
