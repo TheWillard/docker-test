@@ -8,7 +8,7 @@ ARG STEAM_APP_ID=1874900
 USER root
 
 # install Arma Reforger Server with steamcmd to /ars
-RUN steamcmd +force_install_dir /ars +login anonymous +app_update ${STEAM_APP_ID} validate +quit
+RUN steamcmd +force_install_dir /ars +login anonymous +@sSteamCmdForcePlatformType linux +app_update ${STEAM_APP_ID} validate +quit
 
 # change owner of /ars to ubuntu user and group to allow executing it
 RUN chown -R ubuntu:ubuntu /ars
