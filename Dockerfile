@@ -3,6 +3,12 @@ FROM steamcmd/steamcmd:latest
 
 # Build argument for Steam app ID (defaults to stable Arma Reforger Server)
 ARG STEAM_APP_ID=1874900
+ARG BRANCH=stable
+ARG VERSION=1.0.0
+
+LABEL de.grad.arsa.appid=${STEAM_APP_ID}
+LABEL de.grad.arsa.branch=${BRANCH}
+LABEL de.grad.arsa.version=${VERSION}
 
 # set 'root' as current user
 USER root

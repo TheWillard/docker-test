@@ -47,3 +47,5 @@ jobs:
           tags: thewillard/arsa-test:${{ env.BRANCH_NAME }}, thewillard/arsa-test:${{ env.VERSION }}
           build-args: |
             STEAM_APP_ID=${{ env.APP_ID }}
+            BRANCH=${{ env.BRANCH_NAME }}
+            VERSION=${{ env.VERSION }}
